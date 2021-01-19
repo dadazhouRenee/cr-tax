@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Row, Col } from 'antd';
+import { CalendarOutlined } from '@ant-design/icons';
+import { Row, Col } from 'antd';
 import Footer from '../components/Footer';
 import Numeral from '../utils/Numeral';
 
@@ -29,7 +30,7 @@ class App extends PureComponent {
                     <span>开票日期:</span>
                     <span className={`${prefixCls}-top-left-box-input`}>
                       <input className={`${prefixCls}-input`} value={taxConfig.billDate || ''} disabled />
-                      <Icon className={`${prefixCls}-top-right-box-calender`} type="calendar" />
+                      <CalendarOutlined className={`${prefixCls}-top-right-box-calender`} />
                     </span>
                   </div>
                 </div>
@@ -292,7 +293,7 @@ class App extends PureComponent {
           <Footer footerConfig={taxConfig} />    
         </div>
       </div>
-    )
+    );
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Row, Col } from 'antd';
+import { Row, Col } from 'antd';
 
 class App extends PureComponent {
   constructor(props) {

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Radio, Icon } from 'antd';
+import { CalendarOutlined } from '@ant-design/icons';
+import { Radio } from 'antd';
 
 class Footer extends PureComponent {
   constructor(props) {
@@ -28,7 +29,7 @@ class Footer extends PureComponent {
                   <span>认证日期:</span>
                   <span className={`${prefixCls}-top-right-box-input`}>
                     <input className={`${prefixCls}-input ${prefixCls}-footer-input`} value={footerConfig.dateOfCertificationDate || ''} disabled />
-                    <Icon className={`${prefixCls}-top-right-box-calender`} type="calendar" />
+                    <CalendarOutlined className={`${prefixCls}-top-right-box-calender`} />
                   </span>                  
                 </span>
               </div>
@@ -61,7 +62,7 @@ class Footer extends PureComponent {
           )
         }
       </div>
-    )
+    );
   }
 }
 

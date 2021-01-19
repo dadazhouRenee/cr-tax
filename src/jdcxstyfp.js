@@ -2,7 +2,8 @@ import React, { PureComponent, Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import OuiDom from './utils/ouiDomUtils';
-import { Row, Col, Icon, Select, Radio } from 'antd';
+import { CalendarOutlined } from '@ant-design/icons';
+import { Row, Col, Select, Radio } from 'antd';
 import Numeral from './utils/Numeral';
 
 const { Option } = Select;
@@ -42,7 +43,7 @@ class Comp extends PureComponent {
                     <span>开票日期:</span>
                     <span className={`${prefixCls}-top-left-box-input`}>
                       <input className={`${prefixCls}-input`} value={taxConfig.billDate || ''} disabled />
-                      <Icon className={`${prefixCls}-top-right-box-calender`} type="calendar" />
+                      <CalendarOutlined className={`${prefixCls}-top-right-box-calender`} />
                     </span>
                   </div>
                 </div>
@@ -296,7 +297,7 @@ class Comp extends PureComponent {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
