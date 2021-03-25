@@ -8,6 +8,7 @@ react component tax and bill styles
 ## All TaxTemplate
 
 - 增值税专用发票
+- 增值税专用电子发票
 - 增值税普通发票
 - 增值税电子普通发票
 - 机动车销售统一发票
