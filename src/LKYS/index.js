@@ -14,6 +14,13 @@ class App extends PureComponent {
     }
   }
 
+  getTaxRate = (val) => {
+    if (val === 0) {
+      return '0'
+    }
+    return val
+  }
+
   componentDidMount() {
 
   }
@@ -32,12 +39,12 @@ class App extends PureComponent {
           <td>{item.modelNumber}</td>
           <td>{item.modelUnit}</td>
           <td>{item.modelCount}</td>
-          <td>{item.modelPrice}</td>
-          <td>{item.price && Numeral(item.price).format('0,0.00')}</td>
+          <td>{item.modelPrice && Numeral(item.modelPrice).format('0,0.00')}</td>
+          <td>{item.billPrice && Numeral(item.billPrice).format('0,0.00')}</td>
           <td>
             {
-              item.taxRate
-              ? (<div>{item.taxRate}</div>)
+              this.getTaxRate(item.taxRate)
+              ? (<div>{item.taxRate * 100}%</div>)
               : (<div>&nbsp;</div>)
             }
           </td>
@@ -99,7 +106,7 @@ class App extends PureComponent {
                               <span style={{marginRight: 40}} className={`${prefixCls}-dataBox-table-cellBox-star`}>名</span>称
                             </span>
                             <span>
-                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.buyCompanyName} disabled />
+                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.buyName || ''} disabled />
                             </span>
                           </div>
                           <div className={`${prefixCls}-dataBox-table-cellBox`}>
@@ -115,7 +122,7 @@ class App extends PureComponent {
                               地址、电话
                             </span>
                             <span>
-                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.buyCompanyAddrAphone} disabled />
+                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.buyAddrAndTel || ''} disabled />
                             </span>
                           </div> 
                           <div className={`${prefixCls}-dataBox-table-cellBox`}>
@@ -123,7 +130,7 @@ class App extends PureComponent {
                               开户行及账户
                             </span>
                             <span>
-                              <input className={`${prefixCls}-dataBox-input ${prefixCls}-dataBox-noLine`} value={taxConfig.buyCompanyBankNumber} disabled />
+                              <input className={`${prefixCls}-dataBox-input ${prefixCls}-dataBox-noLine`} value={taxConfig.buyBankAddrAndAccount || ''} disabled />
                             </span>
                           </div>                                                                  
                         </div>                                                                                
@@ -168,7 +175,7 @@ class App extends PureComponent {
                         <span style={{fontSize: 13}}>（小写）</span>
                       </td>
                       <td className={`${prefixCls}-dataBox-seller-HJS`}>
-                        {`¥${taxConfig.billTaxPriceLower && Numeral(taxConfig.billTaxPriceLower).format('0,0.00')}`}
+                      {`¥${taxConfig.billTaxPrice && Numeral(taxConfig.billTaxPrice).format('0,0.00')}`}
                       </td>
                     </tr>                       
                   </tbody>              
@@ -184,7 +191,7 @@ class App extends PureComponent {
                               <span style={{marginRight: 40}} className={`${prefixCls}-dataBox-table-cellBox-star`}>名</span>称
                             </span>
                             <span>
-                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.sellCompanyName} disabled />
+                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.sellName || ''} disabled />
                             </span>
                           </div>
                           <div className={`${prefixCls}-dataBox-table-cellBox`}>
@@ -200,7 +207,7 @@ class App extends PureComponent {
                               地址、电话
                             </span>
                             <span>
-                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.sellCompanyAddrPhone} disabled />
+                              <input className={`${prefixCls}-dataBox-input`} value={taxConfig.sellAddrAndTel || ''} disabled />
                             </span>
                           </div> 
                           <div className={`${prefixCls}-dataBox-table-cellBox`}>
@@ -208,7 +215,7 @@ class App extends PureComponent {
                               开户行及账户
                             </span>
                             <span>
-                              <input className={`${prefixCls}-dataBox-input ${prefixCls}-dataBox-noLine`} value={taxConfig.sellCompanyBankNumber} disabled />
+                              <input className={`${prefixCls}-dataBox-input ${prefixCls}-dataBox-noLine`} value={taxConfig.sellBankAddrAndAccount || ''} disabled />
                             </span>
                           </div>                                                                  
                         </div>                                                                                

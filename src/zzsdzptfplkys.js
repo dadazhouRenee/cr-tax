@@ -77,10 +77,10 @@ class Comp extends PureComponent {
                   </div>
                 </Col>
                 <Col span={8}>
-                  <div className={`${prefixCls}-top-titleBox`}>
-                    <div className={`${prefixCls}-top-titleBox-title`}>增值税电子普通发票(旅客运输)</div>
-                    <div className={`${prefixCls}-top-titleBox-line`}></div>
-                    <div className={`${prefixCls}-top-titleBox-sub`}>发票联</div>
+                  <div className={`${prefixCls}-top-titleBoxA`}>
+                    <div className={`${prefixCls}-top-titleBoxA-title`}>增值税电子普通发票(旅客运输)</div>
+                    <div className={`${prefixCls}-top-titleBoxA-line`}></div>
+                    <div className={`${prefixCls}-top-titleBoxA-sub`}>发票联</div>
                   </div>
                 </Col>
                 <Col span={8}>
