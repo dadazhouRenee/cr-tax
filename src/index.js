@@ -1,6 +1,7 @@
 import React, { PureComponent, Component } from 'react';
 import PropTypes from 'prop-types';
 import ZZSZY from './zzszyfp';
+import ZZSDZPTLKYS from './zzsdzptfplkys';
 import ZZSDZFP from './zzszydzfp'
 import ZZSDZ from './zzsdzptfp';
 import JDCXS from './jdcxstyfp';
@@ -44,6 +45,14 @@ class Comp extends PureComponent {
     } else if (mode === 'ZZSZYDZFP') {
       return (
         <ZZSDZFP
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />        
+      )
+    } else if (mode === 'ZZSDZPTLKYS') {
+      return (
+        <ZZSDZPTLKYS
           prefixCls={prefixCls}
           taxConfig={taxConfig}
           taxDataList={taxDataList}
