@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Testone from 'cr-tax';
+import Testone from 'rs-tax';
 import '../assets/index.less';
-import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'cr-tax';
-
+import 'antd/dist/antd.css';
+import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'rs-tax';
+// 如果无法查看效果 可以修改 node_modules/rc-tools/lib/getWebpackConfig.js 中的 module - noParse 参数
 const reactContainer = document.getElementById('__react-content');
 const bodyContainer = document.getElementsByTagName('body')
 bodyContainer[0].style.padding = '10px'

@@ -1,6 +1,6 @@
 {
   "name": "rs-tax",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "invoice template of react component",
   "scripts": {
     "start": "rc-tools run server",
@@ -15,7 +15,7 @@
   "keywords": [],
   "author": "feasin",
   "config": {
-    "port": 8018,
+    "port": 8028,
     "entry": {
       "cr-comp": [
         "./src/index.js"
