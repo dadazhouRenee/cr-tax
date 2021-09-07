@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Testone from 'rs-tax';
+import Testone from '../src';
 import '../assets/index.less';
 import 'antd/dist/antd.css';
-import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'rs-tax';
+import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from '../src';
 // 如果无法查看效果 可以修改 node_modules/rc-tools/lib/getWebpackConfig.js 中的 module - noParse 参数
 const reactContainer = document.getElementById('__react-content');
 const bodyContainer = document.getElementsByTagName('body')
