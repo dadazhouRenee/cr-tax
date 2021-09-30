@@ -1,6 +1,6 @@
 {
   "name": "rs-tax-test",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "invoice template of react component",
   "scripts": {
     "start": "rc-tools run server",
