@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Testone from 'cr-tax';
+import Testone from 'rs-tax-test2';
+import '../src/utils/antd.css';
 import '../assets/index.less';
-import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'cr-tax';
+import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP, HCP, KYQC, HKYSXCD, CZC } from 'rs-tax-test2';
+
+// import Testone from 'cr-tax';
+// import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'cr-tax';
 
 const reactContainer = document.getElementById('__react-content');
 const bodyContainer = document.getElementsByTagName('body')
@@ -11,7 +15,7 @@ reactContainer.style.cssText = `
                                 // border: 1px solid #11d0bc;
                                 // padding: 10px;
                                 // margin-bottom: 10px;
-                               `
+                              `
 const boxStyle = {
   // width: 1150,
   // height: 'auto',
@@ -220,8 +224,12 @@ function render(container) {
         {/* <HGJKZZS taxList={taxListHG} taxConfig={taxConfigHG} /> */}
         {/* <WPSR taxList={taxListWP} taxConfig={taxConfigWP} /> */}
         {/* <ESCXS taxConfig={taxConfigJDC} /> */}
-        {/* <LKYS taxDataList={taxDataListB} taxConfig={taxConfigDZ} /> */}
+        <LKYS taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
         {/* <NCP taxDataList={taxDataListB} taxConfig={taxConfigDZ} /> */}
+        <HCP taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        <CZC taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        <KYQC taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        <HKYSXCD taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
       </div>
     </div>, container
   )
