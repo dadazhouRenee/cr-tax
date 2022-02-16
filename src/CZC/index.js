@@ -38,7 +38,7 @@ class App extends PureComponent {
                     <div className={`${prefixCls}-top-left-box`}>
                       <span>*发票代码:</span>
                       <span className={`${prefixCls}-top-left-box-input`}>
-                        <input className={`${prefixCls}-input`} value={taxConfig.billCode} disabled />
+                        <input className={`${prefixCls}-input`} value={taxConfig.billCode || ''} disabled />
                       </span>
                     </div>
                   </div>
@@ -55,7 +55,7 @@ class App extends PureComponent {
                     <div className={`${prefixCls}-top-left-box`}>
                       <span>*发票号码:</span>
                       <span className={`${prefixCls}-top-left-box-input`}>
-                        <input className={`${prefixCls}-input`} value={taxConfig.billCode} disabled />
+                        <input className={`${prefixCls}-input`} value={taxConfig.billNumber || ''} disabled />
                       </span>
                     </div>
                   </div>
@@ -66,27 +66,27 @@ class App extends PureComponent {
               <tbody>
                 <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                   <td className={`${prefixCls}-dataBox-table-label`}>乘车时间</td>
-                  <td className={`${prefixCls}-dataBox-table-content`}><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.ccsj}</span></td>
                   <td className={`${prefixCls}-dataBox-table-label`}>上车时间</td>
-                  <td className={`${prefixCls}-dataBox-table-content`}><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.scsj}</span></td>
                 </tr>
                 <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                   <td className={`${prefixCls}-dataBox-table-label`}>里程</td>
-                  <td className={`${prefixCls}-dataBox-table-content`}><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.lc}</span></td>
                   <td className={`${prefixCls}-dataBox-table-label`}>下车时间</td>
-                  <td className={`${prefixCls}-dataBox-table-content`}><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.xcsj}</span></td>
                 </tr>
 
                 <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                   <td className={`${prefixCls}-dataBox-table-label`}>车牌号</td>
-                  <td className={`${prefixCls}-dataBox-table-content`}><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.cph}</span></td>
                   <td className={`${prefixCls}-dataBox-table-label`}>发票所在地</td>
-                  <td className={`${prefixCls}-dataBox-table-content`}><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.fpszd}</span></td>
                 </tr>
                 
                 <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                   <td className={`${prefixCls}-dataBox-table-label`}>总金额</td>
-                  <td className={`${prefixCls}-dataBox-table-content`} colSpan="3"><span></span></td>
+                  <td className={`${prefixCls}-dataBox-table-content`} colSpan="3"><span>{taxConfig.otherMessage?.je}</span></td>
                 </tr>
               </tbody>
             </table>

@@ -7,7 +7,7 @@ import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP, HCP, KYQC, HKYSXCD, CZ
 
 // import Testone from 'cr-tax';
 // import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'cr-tax';
-
+/* 报错修复: node_modulesrc-toolslibgetWebpackConfig.js  配置 moment*/
 const reactContainer = document.getElementById('__react-content');
 const bodyContainer = document.getElementsByTagName('body')
 bodyContainer[0].style.padding = '10px'
@@ -192,6 +192,137 @@ const taxConfigDZ = {
   status_of_certification: 1,
   date_of_certification_date: '2020-01-09',
 }
+const HCPConfig = {
+  billNumber: '001',
+  otherMessage: {
+    cc: "G169",
+    ccrq: "2020-01-12",
+    ccrxm: "朱莹",
+    ccsj: "16:40",
+    cfd: "北京南",
+    je: "443.50",
+    mdd: "南京南",
+    sfzh: "3201061990****2046",
+    zwlx: "二等座",
+  }
+}
+const KYQCCofig = {
+  "companyCode": "836910564977545216",
+  "period": "2020-01",
+  "billDate": "2020-01-11",
+  "billCode": "132051981313",
+  "billNumber": "03581822",
+  "billType": 18,
+  "direction": 0,
+  "billTaxPrice": null,
+  "billTaxPriceUpper": null,
+  "billNoTaxValue": 82,
+  "billTaxValue": null,
+  "buyName": null,
+  "buyTaxpayerNumber": null,
+  "buyAddress": null,
+  "buyTelephone": null,
+  "buyBank": null,
+  "buyAddrAndTel": null,
+  "buyBankAddress": null,
+  "buyBankAddrAndAccount": null,
+  "sellName": "",
+  "sellTaxpayerNumber": null,
+  "sellAddress": null,
+  "sellTelephone": null,
+  "sellBank": null,
+  "sellAddrAndTel": null,
+  "sellBankAddress": null,
+  "sellBankAddrAndAccount": null,
+  "billSource": 5,
+  "makeType": 0,
+  "remark": null,
+  "detailStatus": 2,
+  "billStatus": 0,
+  "statusOfCertification": "1",
+  "dateOfCertificationDate": null,
+  "statusOfDeduction": "0",
+  "dateOfDeduction": null,
+  "methonOfDeduction": null,
+  "collectionMethod": null,
+  "numberOfAttachment": null,
+  "agriculturalInvoice": "0",
+  "agriculturalProductBusinessType": null,
+  "otherMessage": {
+    "cfd": "宿迁",
+    "ccrq": "2020-01-11",
+    "sfzh": "320982********3528",
+    "ccrxm": "施维",
+    "ccsj": "14:10",
+    "je": "82.00",
+    "mdd": "南京红山站"
+  }
+}
+const HKYSXCDConfig = {
+  "companyCode": "836910564977545216",
+  "period": "2019-01",
+  "billDate": "2019-01-12",
+  "billCode": null,
+  "billNumber": "1604792693151",
+  "billType": 19,
+  "direction": 0,
+  "billTaxPrice": null,
+  "billTaxPriceUpper": null,
+  "billNoTaxValue": 308,
+  "billTaxValue": 0,
+  "buyName": null,
+  "buyTaxpayerNumber": null,
+  "buyAddress": null,
+  "buyTelephone": null,
+  "buyBank": null,
+  "buyAddrAndTel": null,
+  "buyBankAddress": null,
+  "buyBankAddrAndAccount": null,
+  "sellName": "",
+  "sellTaxpayerNumber": null,
+  "sellAddress": null,
+  "sellTelephone": null,
+  "sellBank": null,
+  "sellAddrAndTel": null,
+  "sellBankAddress": null,
+  "sellBankAddrAndAccount": null,
+  "billSource": 5,
+  "makeType": 0,
+  "remark": null,
+  "detailStatus": 2,
+  "billStatus": 0,
+  "statusOfCertification": "1",
+  "dateOfCertificationDate": null,
+  "statusOfDeduction": "0",
+  "dateOfDeduction": null,
+  "methonOfDeduction": null,
+  "collectionMethod": null,
+  "numberOfAttachment": null,
+  "agriculturalInvoice": "0",
+  "agriculturalProductBusinessType": null,
+  "otherMessage": {
+    "ccrq": "2014-01-12",
+    "bxf": "XXX",
+    "ccrxm": "WU/JIA HUI MS",
+    "pj": "2160.00",
+    "ze": "308.00",
+    "xsdwdh": "SHA717,98309722",
+    "hc": [
+      {
+        "cjsj":"08:25:00",
+        "cfd":"南京",
+        "cjrq":"2014-02-16",
+        "zwdj":"L",
+        "mdd":"香港",
+        "cyr":"KA",
+        "hbh":"CX6851"
+      },
+      {"cjsj":"16:30:00","cfd":"香港","cjrq":"2014-02-16","zwdj":"L","mdd":"胡志明市","cyr":"CX","hbh":"CX765"},
+      {"cjsj":"19:15:00","cfd":"胡志明市","cjrq":"2014-02-22","zwdj":"L","mdd":"香港","cyr":"CX","hbh":"CX764"},
+      {"cjsj":"19:40:00","cfd":"香港","cjrq":"2014-02-23","zwdj":"L","mdd":"南京","cyr":"KA","hbh":"CX6838"}
+    ]
+  }
+}
 const taxListHG = [{}, {}]
 const taxConfigHG = {}
 const taxListWP = [{}, {}]
@@ -224,12 +355,27 @@ function render(container) {
         {/* <HGJKZZS taxList={taxListHG} taxConfig={taxConfigHG} /> */}
         {/* <WPSR taxList={taxListWP} taxConfig={taxConfigWP} /> */}
         {/* <ESCXS taxConfig={taxConfigJDC} /> */}
-        <LKYS taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        {/* <LKYS taxDataList={taxDataListB} taxConfig={taxConfigDZ} /> */}
         {/* <NCP taxDataList={taxDataListB} taxConfig={taxConfigDZ} /> */}
-        <HCP taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        <h1>增值税普通发票</h1>
+        <Testone
+          taxConfig={taxConfigDZ}
+          taxDataList={taxDataList}
+          mode={'ZZSPTFP'}
+        />
+        <h1>增值税电子普通发票</h1>
+        <Testone
+          taxConfig={taxConfigDZ}
+          taxDataList={taxDataList}
+          mode={'ZZSDZPTFP'}
+        />
+        <HCP taxDataList={taxDataListB} taxConfig={HCPConfig} />
+        <br />
         <CZC taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
-        <KYQC taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
-        <HKYSXCD taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        <br />
+        <KYQC taxDataList={taxDataListB} taxConfig={KYQCCofig} />
+        <br />
+        <HKYSXCD taxDataList={taxDataListB} taxConfig={HKYSXCDConfig} />
       </div>
     </div>, container
   )
