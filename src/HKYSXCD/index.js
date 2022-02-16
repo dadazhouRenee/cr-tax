@@ -30,6 +30,7 @@ class App extends PureComponent {
     const { prefixCls, taxDataList=[], taxConfig={} } = this.props
     return (
       <div className={`${prefixCls} ${prefixCls}-con-B`}>
+        <Scrollbars style={{height: 657}}>
           <div className={`${prefixCls}-main  ${prefixCls}-hcp`}>
             <div className={`${prefixCls}-top`}>
               <Row>
@@ -121,9 +122,9 @@ class App extends PureComponent {
                     </tr>
                     <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                       <td className={`${prefixCls}-dataBox-table-label`}>出发站</td>
-                      <td className={`${prefixCls}-dataBox-table-content`}><span>{hcItem.cfd}</span></td>
+                      <td className={`${prefixCls}-dataBox-table-content`}><span>{hcItem.cfz}</span></td>
                       <td className={`${prefixCls}-dataBox-table-label`}>到达站</td>
-                      <td className={`${prefixCls}-dataBox-table-content`}><span>{hcItem.mdd}</span></td>
+                      <td className={`${prefixCls}-dataBox-table-content`}><span>{hcItem.ddz}</span></td>
                     </tr>
                   </Fragment>)
                   : null
@@ -132,6 +133,7 @@ class App extends PureComponent {
               </tbody>
             </table>
           </div>
+        </Scrollbars>
       </div>
     );
   }
