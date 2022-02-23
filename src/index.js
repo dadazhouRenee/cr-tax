@@ -18,6 +18,8 @@ import HCP from './HCP';
 import CZC from './CZC';
 import KYQC from './KYQC';
 import HKYSXCD from './HKYSXCD';
+import GLF from './GLF';
+import DEFP from './DEFP';
 
 class Comp extends PureComponent {
 
@@ -117,7 +119,23 @@ class Comp extends PureComponent {
           taxDataList={taxDataList}
         />         
       )
-    }else {
+    } else if (mode === 'GLF') {
+      return (
+        <GLF
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
+    }  else if (mode === 'DEFP') {
+      return (
+        <DEFP
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
+    } else {
         <ZZSZY
           prefixCls={prefixCls}
           taxConfig={taxConfig}
@@ -131,7 +149,7 @@ Comp.propTypes = {
   prefixCls: PropTypes.string,
   taxConfig: PropTypes.object,
   taxDataList: PropTypes.arrayOf(PropTypes.object),
-  mode: PropTypes.oneOf(['ZZSZYFP', 'ZZSDZPTFP', 'JDCXSTYFP', 'ZZSPTFP', 'ZZSDZTXF', 'HCP', 'KYQC', 'HKYSXCD', 'CZC']),
+  mode: PropTypes.oneOf(['ZZSZYFP', 'ZZSDZPTFP', 'JDCXSTYFP', 'ZZSPTFP', 'ZZSDZTXF', 'HCP', 'KYQC', 'HKYSXCD', 'CZC', 'GLF', 'DEFP']),
 }
 Comp.defaultProps = {
   prefixCls: 'cr-tax',
@@ -152,5 +170,7 @@ export {
   CZC,
   KYQC,
   HKYSXCD,
+  GLF,
+  DEFP,
 }
 export default Comp

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Testone from 'rs-tax-test2';
 import '../src/utils/antd.css';
 import '../assets/index.less';
-import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP, HCP, KYQC, HKYSXCD, CZC } from 'rs-tax-test2';
+import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP, HCP, KYQC, HKYSXCD, CZC, GLF, DEFP, } from 'rs-tax-test2';
 
 // import Testone from 'cr-tax';
 // import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'cr-tax';
@@ -376,6 +376,10 @@ function render(container) {
         <KYQC taxDataList={taxDataListB} taxConfig={KYQCCofig} />
         <br />
         <HKYSXCD taxDataList={taxDataListB} taxConfig={HKYSXCDConfig} />
+        <br />
+        <GLF taxDataList={taxDataListB} taxConfig={{}} />
+        <br />
+        <DEFP taxDataList={taxDataListB} taxConfig={{}} />
       </div>
     </div>, container
   )
