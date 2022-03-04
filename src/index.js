@@ -119,6 +119,14 @@ class Comp extends PureComponent {
           taxDataList={taxDataList}
         />         
       )
+    } else if (mode === 'CZC') {
+      return (
+        <CZC
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
     } else if (mode === 'GLF') {
       return (
         <GLF

@@ -80,11 +80,11 @@ class App extends PureComponent {
                 <td className={`${prefixCls}-dataBox-table-label`}>发票消费类型</td>
                 <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.fpxflx}</span></td>
                 <td className={`${prefixCls}-dataBox-table-label`}>高速标识</td>
-                <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.gsbs}</span></td>
+                <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.gsbz}</span></td>
               </tr>
               <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                 <td className={`${prefixCls}-dataBox-table-label`}>*总金额</td>
-                <td className={`${prefixCls}-dataBox-table-content`} colSpan="3"><span>{taxConfig.otherMessage?.ze}</span></td>
+                <td className={`${prefixCls}-dataBox-table-content`} colSpan="3"><span>{taxConfig.otherMessage?.zje}</span></td>
               </tr>
             </tbody>
           </table>

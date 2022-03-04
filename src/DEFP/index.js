@@ -70,7 +70,7 @@ class App extends PureComponent {
               </tr>
               <tr className={`${prefixCls}-dataBox-data-dataTr`}>
                 <td className={`${prefixCls}-dataBox-table-label`}>总金额</td>
-                <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.ze}</span></td>
+                <td className={`${prefixCls}-dataBox-table-content`}><span>{taxConfig.otherMessage?.zje}</span></td>
               </tr>
             </tbody>
           </table>
