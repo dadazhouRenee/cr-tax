@@ -14,6 +14,12 @@ import WPSR from './WPSR';
 import ESCXS from './ESCXS';
 import LKYS from './LKYS';
 import NCP from './NCP';
+import HCP from './HCP';
+import CZC from './CZC';
+import KYQC from './KYQC';
+import HKYSXCD from './HKYSXCD';
+import GLF from './GLF';
+import DEFP from './DEFP';
 
 class Comp extends PureComponent {
 
@@ -89,6 +95,46 @@ class Comp extends PureComponent {
           taxDataList={taxDataList}
         />         
       )
+    } else if (mode === 'HCP') {
+      return (
+        <HCP
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
+    } else if (mode === 'KYQC') {
+      return (
+        <KYQC
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
+    } else if (mode === 'HKYSXCD') {
+      return (
+        <HKYSXCD
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
+    } else if (mode === 'GLF') {
+      return (
+        <GLF
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
+    }  else if (mode === 'DEFP') {
+      return (
+        <DEFP
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />         
+      )
     } else {
         <ZZSZY
           prefixCls={prefixCls}
@@ -103,7 +149,7 @@ Comp.propTypes = {
   prefixCls: PropTypes.string,
   taxConfig: PropTypes.object,
   taxDataList: PropTypes.arrayOf(PropTypes.object),
-  mode: PropTypes.oneOf(['ZZSZYFP', 'ZZSDZPTFP', 'JDCXSTYFP', 'ZZSPTFP', 'ZZSDZTXF']),
+  mode: PropTypes.oneOf(['ZZSZYFP', 'ZZSDZPTFP', 'JDCXSTYFP', 'ZZSPTFP', 'ZZSDZTXF', 'HCP', 'KYQC', 'HKYSXCD', 'CZC', 'GLF', 'DEFP']),
 }
 Comp.defaultProps = {
   prefixCls: 'cr-tax',
@@ -120,5 +166,11 @@ export {
   ESCXS,
   LKYS,
   NCP,
+  HCP,
+  CZC,
+  KYQC,
+  HKYSXCD,
+  GLF,
+  DEFP,
 }
 export default Comp
