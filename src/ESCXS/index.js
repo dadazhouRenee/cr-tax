@@ -286,6 +286,14 @@ class App extends PureComponent {
                       <input className={`${prefixCls}-dataBox-dataA-input`} value={(taxConfig.otherMessage && taxConfig.otherMessage.usedCarTelephone) || ''} disabled />
                     </td>
                   </tr>                                
+                  <tr>
+                    <td className={`${prefixCls}-dataBox-dataB-td-one ${prefixCls}-dataBox-dataB-titleC`}>
+                      备注
+                    </td>
+                    <td colSpan='5'>
+                      <input className={`${prefixCls}-dataBox-dataA-input`} value={taxConfig.remark || ''} disabled />
+                    </td>
+                  </tr>                                 
                 </tbody>
               </table>
             </div>
