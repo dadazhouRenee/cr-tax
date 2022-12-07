@@ -868,3 +868,54 @@
 
 
 }
+
+
+/**
+ * 全电发票
+ *----------------------
+ */
+.@{app} {
+  @color: #D49366;
+  &-has-colon {
+    &::after {
+      content: '：';
+      display: inline-block;
+    }
+  }
+  &-dataBox-table-cellBox-label {
+    color: @color;
+  }
+  &-dataBox-table-cellBox-conetnt {
+    color: #3E7AFA;
+  }
+  &-qd-con {
+    td {
+      padding: 12px;
+      line-height: 1.5;
+      .@{app}-dataBox-data-dataTr-text {
+        padding: 0;
+        line-height: 1.5;
+      }
+
+    }
+    .@{app}-no-border-right {
+      border-right: none !important;
+    }
+    .@{app}-no-border-left {
+      border-left: none !important;
+    }
+    .@{app}-top-titleBox {
+      width: 293px;
+    }
+    .@{app}-top-right {
+      padding-top: 50px;
+    }
+    .@{app}-top-right-box {
+      margin-top: 5px;
+      .@{app}-input {
+        border-bottom: none !important;
+        color: @color;
+      }
+    }
+  }
+}

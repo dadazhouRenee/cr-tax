@@ -20,6 +20,7 @@ import KYQC from './KYQC';
 import HKYSXCD from './HKYSXCD';
 import GLF from './GLF';
 import DEFP from './DEFP';
+import QDFP from './QDFP';
 
 class Comp extends PureComponent {
 
@@ -143,6 +144,16 @@ class Comp extends PureComponent {
           taxDataList={taxDataList}
         />         
       )
+    } else if(mode === 'QDZZS' || mode === 'QDPP') {
+      // 全电（增值税专用发票）、 全电（普通发票）
+      return (
+        <QDFP
+          mode={mode}
+          prefixCls={prefixCls}
+          taxConfig={taxConfig}
+          taxDataList={taxDataList}
+        />
+      )
     } else {
         <ZZSZY
           prefixCls={prefixCls}
@@ -157,7 +168,7 @@ Comp.propTypes = {
   prefixCls: PropTypes.string,
   taxConfig: PropTypes.object,
   taxDataList: PropTypes.arrayOf(PropTypes.object),
-  mode: PropTypes.oneOf(['ZZSZYFP', 'ZZSDZPTFP', 'JDCXSTYFP', 'ZZSPTFP', 'ZZSDZTXF', 'HCP', 'KYQC', 'HKYSXCD', 'CZC', 'GLF', 'DEFP']),
+  mode: PropTypes.oneOf(['ZZSZYFP', 'ZZSDZPTFP', 'JDCXSTYFP', 'ZZSPTFP', 'ZZSDZTXF', 'HCP', 'KYQC', 'HKYSXCD', 'CZC', 'GLF', 'DEFP', 'QDZZS', 'QDPP']),
 }
 Comp.defaultProps = {
   prefixCls: 'cr-tax',
@@ -180,5 +191,6 @@ export {
   HKYSXCD,
   GLF,
   DEFP,
+  QDFP,
 }
 export default Comp

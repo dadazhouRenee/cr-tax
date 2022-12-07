@@ -20,6 +20,7 @@ Thumbs.db
 .build
 node_modules
 .cache
+.history
 dist
 assets/**/*.css
 build

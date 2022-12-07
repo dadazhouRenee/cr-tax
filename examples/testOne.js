@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Testone from 'rs-tax-test2';
 import '../src/utils/antd.css';
 import '../assets/index.less';
-import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP, HCP, KYQC, HKYSXCD, CZC, GLF, DEFP, } from 'rs-tax-test2';
+import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP, HCP, KYQC, HKYSXCD, CZC, GLF, DEFP, QDFP} from 'rs-tax-test2';
 
 // import Testone from 'cr-tax';
 // import { GSTYJD, PTFPJP, HGJKZZS, WPSR, ESCXS, LKYS, NCP } from 'cr-tax';
@@ -81,7 +81,7 @@ const taxDataListB = [{
   price: '3,000.00',
   taxRate: 0.16,
   billTaxValue: '435435.16',
-}, {}]
+}]
 
 const taxList = [{
   name: '餐饮费0',
@@ -93,7 +93,7 @@ const taxList = [{
 }, {}]
 const taxConfig = {
   billCode: '001',
-  billNumber: '002',
+  billNumber: '20772944859959643612',
   machineNumber: '003',
   machineId: '004',
   sellName: '山西溪唐小烹餐饮管理有限公司',
@@ -371,7 +371,7 @@ function render(container) {
         />
         <HCP taxDataList={taxDataListB} taxConfig={HCPConfig} />
         <br />
-        <CZC taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
+        {/* <CZC taxDataList={taxDataListB} taxConfig={taxConfigDZ} />
         <br />
         <KYQC taxDataList={taxDataListB} taxConfig={KYQCCofig} />
         <br />
@@ -379,7 +379,10 @@ function render(container) {
         <br />
         <GLF taxDataList={taxDataListB} taxConfig={{}} />
         <br />
-        <DEFP taxDataList={taxDataListB} taxConfig={{}} />
+        <DEFP taxDataList={taxDataListB} taxConfig={{}} /> */}
+        <h1>全电发票</h1>
+        <QDFP mode="QDZZS" taxDataList={taxDataListB} taxConfig={taxConfig} />
+        <br />
       </div>
     </div>, container
   )
